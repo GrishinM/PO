@@ -1,4 +1,6 @@
-﻿namespace Lab1
+﻿using System;
+
+namespace Lab1
 {
     /// <summary>
     /// Abstract class Figure.
@@ -17,7 +19,13 @@
 
         public abstract double P();
 
-        public abstract void Info();
+        public void Info()
+        {
+            Console.WriteLine($"Фигура: {this}{Environment.NewLine}Центр: {Center}{Environment.NewLine}Периметр: {P()}{Environment.NewLine}Площадь: {S()}");
+            LocalInfo();
+        }
+
+        protected abstract void LocalInfo();
 
         public void Move(Vector vector)
         {
@@ -58,6 +66,11 @@
             {
                 var (item1, item2) = pair;
                 return new Vector(item1, item2);
+            }
+
+            public override string ToString()
+            {
+                return $"({X}, {Y})";
             }
         }
     }
