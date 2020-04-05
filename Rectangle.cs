@@ -6,6 +6,13 @@ namespace Lab1
     {
         private double width, height;
 
+
+        public Rectangle(Vector a, double width, double height) : base(a)
+        {
+            Width = width;
+            Height = height;
+        }
+
         public double Width
         {
             get => width;
@@ -26,12 +33,6 @@ namespace Lab1
                     throw new Exception();
                 height = value;
             }
-        }
-
-        public Rectangle(Vector a, double width, double height) : base(a)
-        {
-            Width = width;
-            Height = height;
         }
 
         public override double S()

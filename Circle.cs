@@ -2,10 +2,16 @@
 
 namespace Lab1
 {
-    public class Circle: Figure
+    public class Circle : Figure
     {
         private double r;
-        
+
+
+        public Circle(Vector a, double r) : base(a)
+        {
+            R = r;
+        }
+
         /// <summary>
         /// Радиус круга
         /// </summary>
@@ -42,11 +48,6 @@ namespace Lab1
         public override void Info()
         {
             Console.WriteLine($"Координаты центра: {Center.X}, {Center.Y}\nРадиус: {r}\nПериметр: {P()}\nПлощадь: {S()}\n");
-        }
-
-        public Circle(Vector a, double r) : base(a)
-        {
-            R = r;
         }
     }
 }
