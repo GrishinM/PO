@@ -2,7 +2,7 @@
 {
     public abstract class Figure
     {
-        public Vector Center { get; set; }
+        public Vector Center { get; private set; }
 
         public Figure(Vector a)
         {
@@ -17,8 +17,8 @@
 
         public class Vector
         {
-            public double X { get; private set; }
-            public double Y { get; private set; }
+            public double X { get; }
+            public double Y { get; }
 
             public Vector(double x, double y)
             {
@@ -30,6 +30,22 @@
             {
                 X = vector.X;
                 Y = vector.Y;
+            }
+
+            public static Vector operator +(Vector a, Vector b)
+            {
+                return new Vector(a.X + b.X, a.Y + b.Y);
+            }
+
+            public static Vector operator -(Vector a, Vector b)
+            {
+                return new Vector(a.X - b.X, a.Y - b.Y);
+            }
+
+            public static implicit operator Vector((double, double) pair)
+            {
+                var (item1, item2) = pair;
+                return new Vector(item1, item2);
             }
         }
     }
