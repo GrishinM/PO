@@ -48,9 +48,14 @@ namespace Lab1
             return 2 * (width + height);
         }
 
-        public override void Info()
+        protected override void LocalInfo()
         {
-            Console.WriteLine($"Координаты центра: {Center.X}, {Center.Y}\nШирина: {width}\nВысота: {height}\nПериметр: {P()}\nПлощадь: {S()}\n");
+            Console.WriteLine($"Ширина: {width}{Environment.NewLine}Высота: {height}{Environment.NewLine}");
+        }
+
+        public override string ToString()
+        {
+            return "Прямоугольник";
         }
     }
 }
