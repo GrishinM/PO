@@ -2,43 +2,34 @@
 
 namespace Lab1
 {
+    /// <summary>
+    /// A circle is a shape consisting of all points in a plane that are a given distance from a given point, the centre
+    /// </summary>
     public class Circle : Figure
     {
         private double r;
-        
+
         public Circle(Vector a, double r) : base(a)
         {
             R = r;
         }
 
-        /// <summary>
-        /// Радиус круга
-        /// </summary>
-        /// <exception cref="Exception"></exception>
         public double R
         {
             get => r;
             set
             {
-                if (value < 0)
+                if (value <= 0)
                     throw new Exception();
                 r = value;
             }
         }
 
-        /// <summary>
-        /// Площадь круга
-        /// </summary>
-        /// <returns>Площадь</returns>
         public override double S()
         {
             return Math.PI * Math.Pow(r, 2);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
         public override double P()
         {
             return 2 * Math.PI * r;
