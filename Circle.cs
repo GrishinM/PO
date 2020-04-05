@@ -35,9 +35,14 @@ namespace Lab1
             return 2 * Math.PI * r;
         }
 
-        public override void Info()
+        protected override void LocalInfo()
         {
-            Console.WriteLine($"Координаты центра: {Center.X}, {Center.Y}\nРадиус: {r}\nПериметр: {P()}\nПлощадь: {S()}\n");
+            Console.WriteLine($"Радиус: {r}{Environment.NewLine}");
+        }
+
+        public override string ToString()
+        {
+            return "Круг";
         }
     }
 }
