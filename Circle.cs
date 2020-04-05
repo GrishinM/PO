@@ -5,8 +5,7 @@ namespace Lab1
     public class Circle : Figure
     {
         private double r;
-
-
+        
         public Circle(Vector a, double r) : base(a)
         {
             R = r;

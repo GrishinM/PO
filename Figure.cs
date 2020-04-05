@@ -15,6 +15,11 @@
 
         public abstract void Info();
 
+        public void Move(Vector vector)
+        {
+            Center += vector;
+        }
+
         public class Vector
         {
             public double X { get; }
