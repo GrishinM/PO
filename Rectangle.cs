@@ -2,6 +2,9 @@
 
 namespace Lab1
 {
+    /// <summary>
+    /// A rectangle is a quadrilateral with four right angles
+    /// </summary>
     public class Rectangle : Figure
     {
         private double width, height;
@@ -18,7 +21,7 @@ namespace Lab1
             get => width;
             set
             {
-                if (value < 0)
+                if (value <= 0)
                     throw new Exception();
                 width = value;
             }
@@ -29,7 +32,7 @@ namespace Lab1
             get => height;
             set
             {
-                if (value < 0)
+                if (value <= 0)
                     throw new Exception();
                 height = value;
             }

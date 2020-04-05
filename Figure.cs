@@ -1,10 +1,14 @@
 ﻿namespace Lab1
 {
+    /// <summary>
+    /// Abstract class Figure.
+    /// Contains common methods and fields for all figures
+    /// </summary>
     public abstract class Figure
     {
         public Vector Center { get; private set; }
 
-        public Figure(Vector a)
+        protected Figure(Vector a)
         {
             Center = new Vector(a);
         }
@@ -20,6 +24,9 @@
             Center += vector;
         }
 
+        /// <summary>
+        /// Vector is a geometric object that has magnitude (or length) and direction
+        /// </summary>
         public class Vector
         {
             public double X { get; }
