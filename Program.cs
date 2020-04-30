@@ -10,6 +10,7 @@ namespace Lab1
             a.Info();
             var b = new Circle(new Figure.Vector(5, -7), 3);
             b.Info();
+            Console.WriteLine();
             Console.ReadLine();
         }
     }
